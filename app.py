@@ -84,7 +84,7 @@ if inputImage is not None:
         img = np.expand_dims(image, axis=-1)
 
         single_image = np.expand_dims(img, axis=0)
-
+        st.write(single_image)
         # Now predict using the loaded model
         predictions_one_hot = loaded_model.predict(single_image)
         predictions = np.argmax(predictions_one_hot, axis=1)
