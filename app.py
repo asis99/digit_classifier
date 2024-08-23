@@ -14,14 +14,13 @@ try:
         # Open the image using PIL
         inputImage = inputImage
         
-        col1, col2 = st.columns(2, gap="large")
+        col1, col2 = st.columns([1, 2], gap="large")
         
         with col1:
             st.image(inputImage, caption="Uploaded Image", use_column_width=True)
             modelOutput = MakePredictions(digitImage=inputImage)
         
         with col2:
-            print("okkkkkkkkkkkkkkkkkkkk")
             probData=[i for i in modelOutput.get("Probabilities").tolist()[0]]
             st.bar_chart(data=probData, x_label="Predictions", y_label="Probability")
 
