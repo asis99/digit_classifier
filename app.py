@@ -60,7 +60,7 @@ if inputImage is not None:
         model_name="./model/digits_recognition_cnn.h5"
         loaded_model = tf.keras.models.load_model(model_name)
         # Open the image using PIL
-        inputImage = inputImage
+        inputImage = "./model/3.png"
         
         col1, col2 = st.columns(2, gap="large")
         
