@@ -2,6 +2,7 @@ import streamlit as st
 from model.makeinference import MakePredictions
 import sys
 import pandas as pd
+import cv2
 
 
 sideBar=st.sidebar # creating a side bar component
@@ -10,7 +11,7 @@ st.logo(image="chip-ai-svgrepo-com.svg")
 try:
     if inputImage is not None:
         st.image("./model/3.png", caption="Uploaded Image", use_column_width=True)
-
+        st.write(cv2.imread("./model/3.png"))
         modelOutput = MakePredictions(digitImage="./model/3.png")
         st.write(modelOutput)
         probData=[i for i in modelOutput.get("Probabilities").tolist()[0]]
