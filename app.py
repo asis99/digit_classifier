@@ -20,7 +20,7 @@ try:
         # with col2:
         probData=[i for i in modelOutput.get("Probabilities").tolist()[0]]
         st.write("okkkk")
-        st.bar_chart(data=probData, x_label="Predictions", y_label="Probability")
+        st.line_chart(data=probData, x_label="Predictions", y_label="Probability")
             # sns.barplot(x=[i for i in range(10)], y=probData)
 
         st.write("Model Output:")
