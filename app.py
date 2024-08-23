@@ -1,8 +1,5 @@
 import streamlit as st
-import pandas as pd
-# import seaborn as sns
 from model.makeinference import MakePredictions
-# import seaborn as sns
 import sys
 
 
