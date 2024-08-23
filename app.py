@@ -22,7 +22,7 @@ try:
         
         with col2:
             probData=[i for i in modelOutput.get("Probabilities").tolist()[0]]
-            st.bar_chart(data=probData, x_label="Predictions", y_label="Probability")
+            st.write( st.bar_chart(data=probData, x_label="Predictions", y_label="Probability"))
 
         st.write("Model Output:")
         st.write(modelOutput.get("modelOutput"))
