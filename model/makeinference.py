@@ -7,13 +7,13 @@ import cv2
 # import matplotlib.pyplot as plt
 def ReadImage(digitImage):
     # Assuming digitImage is a file-like object (e.g., from st.file_uploader)
-    # if not isinstance(digitImage, str):
-    #     file_bytes = np.asarray(bytearray(digitImage.read()), dtype=np.uint8)
-    #     image = cv2.imdecode(file_bytes, cv2.IMREAD_GRAYSCALE)
-    # else:
-    #     image = cv2.imread(digitImage, cv2.IMREAD_GRAYSCALE)
+    if not isinstance(digitImage, str):
+        file_bytes = np.asarray(bytearray(digitImage.read()), dtype=np.uint8)
+        image = cv2.imdecode(file_bytes, cv2.IMREAD_GRAYSCALE)
+    else:
+        image = cv2.imread(digitImage, cv2.IMREAD_GRAYSCALE)
 
-    return digitImage
+    return image
 
 def MakePredictions(digitImage):
     model_name="./model/digits_recognition_cnn.h5"
