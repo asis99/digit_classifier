@@ -8,14 +8,17 @@ sideBar=st.sidebar # creating a side bar component
 inputImage=sideBar.file_uploader(label="Upload a image of your digit", type=["jpg", "png"])
 st.logo(image="chip-ai-svgrepo-com.svg")
 
-if inputImage is not None:
-    st.image("3.png", caption="Uploaded Image", use_column_width=True)
+# if inputImage is not None:
+#     st.image("3.png", caption="Uploaded Image", use_column_width=True)
 
-    modelOutput = MakePredictions(digitImage="3.png")
-    st.write(modelOutput)
-    probData=[i for i in modelOutput.get("Probabilities").tolist()[0]]
-    data=pd.DataFrame({"x":probData})
-    st.write(data)
+#     modelOutput = MakePredictions(digitImage="3.png")
+#     st.write(modelOutput)
+#     probData=[i for i in modelOutput.get("Probabilities").tolist()[0]]
+#     data=pd.DataFrame({"x":probData})
+#     st.write(data)
+
+
+
     # try:
 #     if inputImage is not None:
 #         # Open the image using PIL
