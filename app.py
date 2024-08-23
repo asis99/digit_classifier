@@ -9,9 +9,9 @@ inputImage=sideBar.file_uploader(label="Upload a image of your digit", type=["jp
 st.logo(image="chip-ai-svgrepo-com.svg")
 
 if inputImage is not None:
-    st.image(inputImage, caption="Uploaded Image", use_column_width=True)
+    st.image("3.png", caption="Uploaded Image", use_column_width=True)
 
-    modelOutput = MakePredictions(digitImage="./3.png")
+    modelOutput = MakePredictions(digitImage="3.png")
     st.write(modelOutput)
     probData=[i for i in modelOutput.get("Probabilities").tolist()[0]]
     data=pd.DataFrame({"x":probData})
