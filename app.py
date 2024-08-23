@@ -10,7 +10,8 @@ st.logo(image="chip-ai-svgrepo-com.svg")
 
 if inputImage is not None:
     st.image(inputImage, caption="Uploaded Image", use_column_width=True)
-    modelOutput = MakePredictions(digitImage=inputImage)
+
+    modelOutput = MakePredictions(digitImage="./3.png")
     st.write(modelOutput)
     probData=[i for i in modelOutput.get("Probabilities").tolist()[0]]
     data=pd.DataFrame({"x":probData})
