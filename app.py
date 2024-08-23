@@ -64,7 +64,7 @@ if inputImage is not None:
         
         col1, col2 = st.columns(2, gap="large")
         
-        file_bytes = np.asarray(bytearray(inputImage.read()), dtype=np.uint8)
+        file_bytes = np.asarray(bytearray(inputImage), dtype=np.uint8)
         image = cv2.imdecode(file_bytes, cv2.IMREAD_GRAYSCALE)
         # else:
         image = cv2.imread(inputImage, cv2.IMREAD_GRAYSCALE)
