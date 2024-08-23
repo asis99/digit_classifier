@@ -7,6 +7,7 @@ import pandas as pd
 sideBar=st.sidebar # creating a side bar component
 inputImage=sideBar.file_uploader(label="Upload a image of your digit", type=["jpg", "png"])
 st.logo(image="chip-ai-svgrepo-com.svg")
+st.write(inputImage)
 try:
     if inputImage is not None:
         # Open the image using PIL
