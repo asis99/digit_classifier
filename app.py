@@ -22,7 +22,7 @@ try:
         probData=[i for i in modelOutput.get("Probabilities").tolist()[0]]
         data=pd.DataFrame({"x":probData})
         st.write("okkkk")
-        st.bar_chart(data.set_index('x'))
+        st.bar_chart(x=[1,2,3,4,5,6,7])
             # sns.barplot(x=[i for i in range(10)], y=probData)
 
         st.write("Model Output:")
