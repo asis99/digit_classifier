@@ -21,6 +21,7 @@ try:
             modelOutput = MakePredictions(digitImage=inputImage)
         
         with col2:
+            print("okkkkkkkkkkkkkkkkkkkk")
             probData=[i for i in modelOutput.get("Probabilities").tolist()[0]]
             st.bar_chart(data=probData, x_label="Predictions", y_label="Probability")
 
