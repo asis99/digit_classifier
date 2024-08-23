@@ -61,7 +61,7 @@ if inputImage is not None:
         loaded_model = tf.keras.models.load_model(model_name)
         # Open the image using PIL
         inputImage = "./model/3.png"
-        
+        inputImage=cv2.imread(inputImage)
         col1, col2 = st.columns(2, gap="large")
         
         file_bytes = np.asarray(bytearray(inputImage), dtype=np.uint8)
