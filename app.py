@@ -61,13 +61,14 @@ if inputImage is not None:
         loaded_model = tf.keras.models.load_model(model_name)
         # Open the image using PIL
         inputImage = "./model/3.png"
-        inputImage=cv2.imread(inputImage)
+        inputImage=cv2.imread(inputImage, cv2.IMREAD_GRAYSCALE) #
         col1, col2 = st.columns(2, gap="large")
         
         file_bytes = np.asarray(bytearray(inputImage), dtype=np.uint8)
         image = cv2.imdecode(file_bytes, cv2.IMREAD_GRAYSCALE)
         # else:
-        image = cv2.imread(inputImage, cv2.IMREAD_GRAYSCALE)
+        # image = cv2.imread(inputImage, cv2.IMREAD_GRAYSCALE)
+        image=inputImage
         image = cv2.bitwise_not(image)
 
     # Step 3: Define a kernel for dilation (e.g., a 10x10 square kernel)
